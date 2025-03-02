@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="titulo fw-bold text-center w-100">Listado de productos</span>
+                        <button class="btn btn-success" [routerLink]="['/crear-producto']">NUEVO</button>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Ubicación</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coca Cola</td>
+                                <td>Bebida</td>
+                                <td>Buenos Aires</td>
+                                <td>3 €</td>
+                                <td class="text-center">
+                                    <i class="fas fa-pen-to-square text-primary mx-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Portaminas</td>
+                                <td>Útiles</td>
+                                <td>RPC</td>
+                                <td>10 €</td>
+                                <td class="text-center">
+                                    <i class="fas fa-pen-to-square text-primary mx-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
