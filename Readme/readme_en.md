@@ -2,7 +2,7 @@
 
 # Article Management with a MEAN Application
 
-> *This project was developed within the subject **Architecture of Telematic Services***
+> *This project was developed within the subject **Architectures and Telematic Services***
 
 ---
 
