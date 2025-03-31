@@ -1,2 +1,0 @@
-sudo lsof -i :4000
-sudo kill -9 <PID>
