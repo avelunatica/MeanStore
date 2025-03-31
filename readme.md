@@ -24,13 +24,11 @@ Este sistema permite a administración de artigos dunha tenda en liña mediante 
 
 ## 📁 Estrutura do proxecto
 
-```plaintext
 gestion-articulos-mean/
 │
 ├── cliente/           → Aplicación Angular (frontend)
 ├── servidor/          → API REST con Express (backend)
 └── README.md          → Este documento
-```
 
 ---
 
@@ -60,8 +58,6 @@ npm install
 npm run dev
 ```
 
-O backend estará dispoñible en: [http://localhost:3000](http://localhost:3000)
-
 ---
 
 ### 3. Frontend (`/cliente`)
@@ -81,6 +77,7 @@ ng serve
 
 A aplicación estará dispoñible en: [http://localhost:4200](http://localhost:4200)
 
+![Alt text](image.png)
 ---
 
 ## 🤩 Funcionalidades principais
@@ -105,19 +102,6 @@ Cada artigo da base de datos inclúe os seguintes campos:
 - `Cor`
 - `Prezo`
 - `Cantidade`
-
----
-
-## 📅 Entrega
-
-- Data límite: **luns 24 de marzo de 2025 ás 9:00**, mediante a plataforma **Moovi**.
-
----
-
-## 👥 Integrantes do grupo
-
-- Rebeca  
-*(Engade aquí os nomes dos demais membros do grupo se procede)*
 
 
 
