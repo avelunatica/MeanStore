@@ -1,10 +1,22 @@
 # Proxecto: Xestión de artigos cunha aplicación MEAN
 
-> *Este proxecto foi desenvolvido no contexto da materia **Arquitectura de servizos telemáticos**
+> *Este proxecto foi desenvolvido no contexto da materia **Arquitectura de servizos telemáticos***
 
+---
 
+## Índice
 
-## 🌟 Obxectivo
+- [Obxectivo](#-obxectivo)
+- [Tecnoloxías empregadas](#-tecnoloxías-empregadas)
+- [Instalación e execución](#-instalación-e-execución)
+- [Funcionalidades principais](#-funcionalidades-principais)
+- [Galería da interface](#-galeria-da-interface)
+- [Modelo de artigo](#-modelo-de-artigo)
+- [Exemplo de resposta da API](#-exemplo-de-resposta-da-api)
+
+---
+
+## Obxectivo
 
 O obxectivo deste traballo é adquirir as competencias necesarias para a creación e xestión de servizos web RESTful empregando a stack **MEAN** (MongoDB, Express, Angular, Node.js).
 
@@ -12,7 +24,7 @@ Este sistema permite a administración de artigos dunha tenda en liña mediante 
 
 ---
 
-## 💠 Tecnoloxías empregadas
+## Tecnoloxías empregadas
 
 - **MongoDB**: Base de datos NoSQL onde se almacenan os artigos.
 - **Express**: Framework de backend para crear a API REST.
@@ -22,15 +34,6 @@ Este sistema permite a administración de artigos dunha tenda en liña mediante 
 
 ---
 
-## 📁 Estrutura do proxecto
-
-gestion-articulos-mean/
-│
-├── cliente/           → Aplicación Angular (frontend)
-├── servidor/          → API REST con Express (backend)
-└── README.md          → Este documento
-
----
 
 ## 🚀 Instalación e execución
 
@@ -57,7 +60,6 @@ npm install
 ```bash
 npm run dev
 ```
-
 ---
 
 ### 3. Frontend (`/cliente`)
@@ -77,16 +79,22 @@ ng serve
 
 A aplicación estará dispoñible en: [http://localhost:4200](http://localhost:4200)
 
-![Alt text](image.png)
 ---
 
 ## 🤩 Funcionalidades principais
 
-- **Consulta de artigos**: buscador por ID ou atributos (marca, tipo, cor...).
-- **Creación de artigos**: formulario para engadir artigos.
-- **Modificación de artigos**: edición dun artigo seleccionado.
-- **Eliminación de artigos**: borrado con confirmación.
-- **Táboa dinámica**: ordenación e filtrado por columnas.
+- 🔍 **Consulta de artigos**: buscador por ID ou atributos (marca, tipo, cor...).
+- ➕ **Creación de artigos**: formulario para engadir artigos.
+- ✏️ **Modificación de artigos**: edición dun artigo seleccionado.
+- 🗑️ **Eliminación de artigos**: borrado con confirmación.
+- 📊 **Táboa dinámica**: ordenación e filtrado por columnas.
+
+---
+## 🖼️ Galería da interface
+
+| Listaxe | Creación | Edición |
+|--------|----------|---------|
+| ![](Readme/Listado.png) | ![](Readme/crear_producto.png.png) | ![](Readme/editar_producto.png.png) |
 
 ---
 
@@ -103,5 +111,20 @@ Cada artigo da base de datos inclúe os seguintes campos:
 - `Prezo`
 - `Cantidade`
 
+---
 
+## 🧪 Exemplo de resposta da API
+
+```json
+{
+  "_id": "662f0b2c8c3f2a1234567890",
+  "marca": "Faber-Castell",
+  "tipo": "Lapis de cor",
+  "dureza": "HB",
+  "grosor": "0.7",
+  "cor": "Vermello",
+  "prezo": 1.25,
+  "cantidade": 20
+}
+```
 
