@@ -16,7 +16,7 @@ const ProductoSchema = new mongoose.Schema({
     color: {
         type: String,
         required: true,
-        enum: ['azul', 'verde', 'amarillo']
+        enum: ['negro', 'blanco', 'rojo', 'azul', 'verde', 'amarillo', 'naranja', 'morado', 'rosa', 'gris']
     },
     precio: { type: Number, required: true },
     cantidad: { type: Number, required: true, default: 0 }, 

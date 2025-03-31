@@ -11,11 +11,19 @@ export enum GrosorLapiz {
   GROSOR_07 = 0.7
 }
 
-export enum ColorLapiz{
+export enum ColorLapiz {
+  NEGRO = "negro",
+  BLANCO = "blanco",
+  ROJO = "rojo",
   AZUL = "azul",
   VERDE = "verde",
-  AMARILLO = "amarillo"
+  AMARILLO = "amarillo",
+  NARANJA = "naranja",
+  MORADO = "morado",
+  ROSA = "rosa",
+  GRIS = "gris"
 }
+
 
 
 export class Producto {

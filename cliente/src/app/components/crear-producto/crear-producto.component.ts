@@ -21,7 +21,7 @@ export class CrearProductoComponent implements OnChanges {
   titulo = 'Crear producto';
   durezas: string[] = ['H', 'HB', 'B', 'F'];
   grosor: number[] = [0.3, 0.5, 0.7];
-  color: string[] = ['azul', 'verde', 'amarillo'];
+  color: string[] = ['negro', 'blanco', 'rojo', 'azul', 'verde', 'amarillo', 'naranja', 'morado', 'rosa', 'gris'];
 
   constructor(
     private fb: FormBuilder,
