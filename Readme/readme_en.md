@@ -1,4 +1,4 @@
-[![Galician](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/es-gal.png "Galego")](readme.md)
+[![Galician](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/es/galicia.png "Galego")](readme.md)
 
 # Article Management with a MEAN Application
 
