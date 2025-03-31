@@ -1,6 +1,8 @@
-# Proxecto: Xestión de artigos cunha aplicación MEAN
+[![United Kingdom](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/gb.png "United Kingdom")](Readme/readme_en.md) 
 
-> *Este proxecto foi desenvolvido no contexto da materia **Arquitectura de servizos telemáticos***
+# Xestión de artigos cunha aplicación MEAN
+
+> *Este proxecto foi desenvolvido no contexto da materia **Arquitecturas e servizos telemáticos***
 
 ---
 
@@ -35,7 +37,7 @@ Este sistema permite a administración de artigos dunha tenda en liña mediante 
 ---
 
 
-## 🚀 Instalación e execución
+## Instalación e execución
 
 ### 1. Clonar o repositorio
 
@@ -81,16 +83,16 @@ A aplicación estará dispoñible en: [http://localhost:4200](http://localhost:4
 
 ---
 
-## 🤩 Funcionalidades principais
+## Funcionalidades principais
 
-- 🔍 **Consulta de artigos**: buscador por ID ou atributos (marca, tipo, cor...).
-- ➕ **Creación de artigos**: formulario para engadir artigos.
-- ✏️ **Modificación de artigos**: edición dun artigo seleccionado.
-- 🗑️ **Eliminación de artigos**: borrado con confirmación.
-- 📊 **Táboa dinámica**: ordenación e filtrado por columnas.
+- **Consulta de artigos**: buscador por ID ou atributos (marca, tipo, cor...).
+- **Creación de artigos**: formulario para engadir artigos.
+- **Modificación de artigos**: edición dun artigo seleccionado.
+- **Eliminación de artigos**: borrado con confirmación.
+- **Táboa dinámica**: ordenación e filtrado por columnas.
 
 ---
-## 🖼️ Galería da interface
+## Galería da interface
 
 - **Listaxe**
 ![](Readme/Listado.png)
@@ -101,7 +103,7 @@ A aplicación estará dispoñible en: [http://localhost:4200](http://localhost:4
 
 ---
 
-## 📦 Modelo de artigo
+## Modelo de artigo
 
 Cada artigo da base de datos inclúe os seguintes campos:
 
@@ -116,7 +118,7 @@ Cada artigo da base de datos inclúe os seguintes campos:
 
 ---
 
-## 🧪 Exemplo de resposta da API
+## Exemplo de resposta da API
 
 ```json
 {
