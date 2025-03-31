@@ -92,9 +92,12 @@ A aplicación estará dispoñible en: [http://localhost:4200](http://localhost:4
 ---
 ## 🖼️ Galería da interface
 
-| Listaxe | Creación | Edición |
-|--------|----------|---------|
-| ![](Readme/Listado.png) | ![](Readme/crear_producto.png.png) | ![](Readme/editar_producto.png.png) |
+- **Listaxe**
+![](Readme/Listado.png)
+- **Creación**
+![](Readme/crear_producto.png) 
+- **Edición**
+![](Readme/editar_producto.png) 
 
 ---
 
