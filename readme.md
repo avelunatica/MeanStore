@@ -44,7 +44,7 @@ git clone https://github.com/avelunatica/gestion-articulos-mean.git
 cd gestion-articulos-mean
 ```
 
----
+
 
 ### 2. Backend (`/servidor`)
 
@@ -60,7 +60,7 @@ npm install
 ```bash
 npm run dev
 ```
----
+
 
 ### 3. Frontend (`/cliente`)
 
