@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+          <div class="card">
+              <div class="card-body text-center">
+                  <span class="titulo">{{ titulo }}</span>
+                  <form class="mt-3" [formGroup]="productoForm" (ngSubmit)="agregarProducto()">
+                      
+                      <!-- Marca -->
+                      <div class="mb-3">
+                          <input type="text" 
+                                 id="marca"
+                                 name="marca"
+                                 formControlName="marca" 
+                                 class="form-control form-control-lg"
+                                 placeholder="Marca">
+                      </div>
+
+                      <!-- Tipo de lápiz -->
+                      <div class="mb-3">
+                          <input type="text" 
+                                 id="tipo_de_lapiz"
+                                 name="tipo_de_lapiz"
+                                 formControlName="tipo_de_lapiz" 
+                                 class="form-control form-control-lg"
+                                 placeholder="Tipo de lápiz">
+                      </div>
+
+                      <!-- Dureza -->
+                      <div class="mb-3">
+                        <select id="dureza" name="dureza" formControlName="dureza" class="form-control form-control-lg">
+                            <option value="" selected disabled>Selecciona la dureza</option>
+                            <option *ngFor="let dureza of durezas" [value]="dureza">{{ dureza }}</option>
+                        </select>
+                      </div>
+
+                      <!-- Grosor -->
+                      <div class="mb-3">
+                        <select id="grosor" name="grosor" formControlName="grosor" class="form-control form-control-lg">
+                            <option value="" selected disabled>Selecciona el grosor</option>
+                            <option *ngFor="let grosor of grosor" [value]="grosor">{{ grosor }}</option>
+
+                        </select>
+                      </div>
+
+                       <!-- Color -->
+                       <div class="mb-3">
+                        <select id="color" name="color" formControlName="color" class="form-control form-control-lg">
+                            <option value="" selected disabled>Selecciona el color</option>
+                            <option *ngFor="let color of color" [value]="color">{{ color }}</option>
+
+                        </select>
+                      </div>
+
+                     
+                      <!-- Precio -->
+                      <div class="mb-3">
+                          <input type="number" 
+                                 id="precio"
+                                 name="precio"
+                                 formControlName="precio" 
+                                 class="form-control form-control-lg"
+                                 placeholder="Precio">
+                      </div>
+
+                      <!-- cantidad -->
+                      <div class="mb-3">
+                          <input type="number" 
+                                 id="cantidad"
+                                 name="cantidad"
+                                 formControlName="cantidad" 
+                                 class="form-control form-control-lg"
+                                 placeholder="Cantidad">
+                      </div>
+
+                      <!-- Botóns -->
+                      <button type="button" class="btn btn-secondary btn-lg float-start" (click)="volver.emit()">
+                          Volver
+                      </button>
+                      <button type="submit" [disabled]="productoForm.invalid" class="btn btn-success btn-lg float-end">
+                          Aceptar
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,150 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="card">
+        <div class="card-body text-center">
+          <ng-container *ngIf="!mostrandoFormulario; else formularioProducto">
+
+            <!-- 🔹 TÍTULO DA TÁBOA -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="titulo fw-bold text-center w-100" style="font-style: italic;">Listado de productos</span>
+            </div>
+
+            <!-- 🔹 FILTRO + BOTÓN NOVO DEBAIXO DO TÍTULO -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="input-group" style="max-width: 320px;">
+                <select class="form-select form-select-sm" [(ngModel)]="campoFiltro" style="width: 100px;">
+                  <option value="_id">ID</option>
+                  <option value="marca">Marca</option>
+                  <option value="tipo_de_lapiz">Tipo de lápiz</option>
+                  <option value="dureza">Dureza</option>
+                  <option value="grosor">Grosor</option>
+                  <option value="color">Color</option>
+                  <option value="precio">Precio</option>
+                  <option value="cantidad">Cantidad</option>
+                </select>
+                <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." [(ngModel)]="valorFiltro" style="width: 120px;">
+                <div class="d-flex">
+                  <button class="btn btn-success btn-sm me-2" (click)="filtrarProductos()">Filtrar</button>
+                  <button class="btn btn-secondary btn-sm" (click)="getProductos()">Limpiar</button>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-success btn-sm" (click)="crearProducto()">Nuevo</button>
+              </div>
+            </div>
+
+            <!-- 🔹 TÁBOA DE PRODUTOS -->
+            <table *ngIf="productosFiltrados.length > 0" class="table table-striped table-hover table-bordered mt-3">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col" (click)="ordenarPorCampo('_id')" style="cursor: pointer;">
+                    ID
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === '_id' && ordenAscendente,
+                      'fa-sort-down': campoOrden === '_id' && !ordenAscendente,
+                      'fa-sort': campoOrden !== '_id'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('marca')" style="cursor: pointer;">
+                    Marca
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'marca' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'marca' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'marca'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('tipo_de_lapiz')" style="cursor: pointer;">
+                    Tipo lápiz
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'tipo_de_lapiz' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'tipo_de_lapiz' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'tipo_de_lapiz'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('dureza')" style="cursor: pointer;">
+                    Dureza
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'dureza' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'dureza' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'dureza'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('grosor')" style="cursor: pointer;">
+                    Grosor
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'grosor' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'grosor' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'grosor'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('color')" style="cursor: pointer;">
+                    Color
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'color' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'color' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'color'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('precio')" style="cursor: pointer;">
+                    Precio
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'precio' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'precio' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'precio'
+                    }"></i>
+                  </th>
+                  <th scope="col" (click)="ordenarPorCampo('cantidad')" style="cursor: pointer;">
+                    Cantidad
+                    <i class="fas" [ngClass]="{
+                      'fa-sort-up': campoOrden === 'cantidad' && ordenAscendente,
+                      'fa-sort-down': campoOrden === 'cantidad' && !ordenAscendente,
+                      'fa-sort': campoOrden !== 'cantidad'
+                    }"></i>
+                  </th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let producto of productosFiltrados">
+                  <td>{{ producto._id }}</td>
+                  <td>{{ producto.marca }}</td>
+                  <td>{{ producto.tipo_de_lapiz }}</td>
+                  <td>{{ producto.dureza }}</td>
+                  <td>{{ producto.grosor }}</td>
+                  <!-- <td style="color: red">{{ producto.dureza }}</td> -->
+                  <td class="rojito_puta">{{ producto.color }}</td>
+                  <td>{{ producto.precio | currency: 'EUR' }}</td>
+                  <td>{{ producto.cantidad }}</td>
+                  <td class="text-center">
+                    <button *ngIf="producto?._id"
+                            (click)="editarProducto(producto._id?.toString())"
+                            class="btn btn-outline-primary btn-sm"
+                            style="margin-right: 5px;">
+                      <i class="fas fa-pen-to-square"></i>
+                    </button>
+                    <button *ngIf="producto?._id"
+                            (click)="eliminarProducto(producto._id?.toString())"
+                            class="btn btn-outline-danger btn-sm"
+                            style="margin-left: 5px;">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5 style="text-align: start; margin-top: 10px" *ngIf="productosFiltrados.length == 0">
+              No hay productos para mostrar
+            </h5>
+          </ng-container>
+
+          <!-- 🔹 FORMULARIO DE CREACIÓN/EDICIÓN -->
+          <ng-template #formularioProducto>
+            <app-crear-producto *ngIf="mostrandoFormulario" [id]="idProductoEditar" (volver)="volverAListar()"></app-crear-producto>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
