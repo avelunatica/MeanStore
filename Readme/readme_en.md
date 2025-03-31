@@ -96,11 +96,11 @@ The app will be available at: [http://localhost:4200](http://localhost:4200)
 ## Interface Gallery
 
 - **List**
-![](Readme/Listado.png)
+![](Listado.png)
 - **Create**
-![](Readme/crear_producto.png)
+![](crear_producto.png)
 - **Edit**
-![](Readme/editar_producto.png)
+![](editar_producto.png)
 
 ---
 
